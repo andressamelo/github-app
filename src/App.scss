@@ -1,0 +1,90 @@
+@import './styles/typography.scss';
+@import './styles/colors.scss';
+
+// mixins
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+.app {
+  width: 80%;
+  margin: auto;
+  max-width: 1200px;
+  display: grid;
+
+  &__search {
+    margin: 2rem 0;
+    input {
+      width: 100%;
+      padding: 14px 28px;
+      box-shadow: 5px 5px 20px #e7e7e7;
+      font-size: 16px;
+      @include border-radius(10px);
+    }
+  }
+
+  &__userInfo {
+
+    &--photo {
+      display: inline-block;
+      width: 25%;
+      
+      img {
+        margin: 5px;
+        padding: 10px;
+        background-color: #FFF;
+        max-width: 200px;
+        float: left;
+      }
+    }
+
+    &--info {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 70%;
+    
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    
+        li {
+          padding: 10px 0;
+        }
+      }
+    
+      span {
+        color: $primary;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__repos,
+  &__starred {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        padding: 5px 0;
+      }
+    }
+  }
+
+  &__actions {
+    margin: 2% 25%;
+  
+    button {
+      background-color: $primary;
+      color: #FFF;
+      border-radius: 5px;
+      margin: 0 5px;
+      padding: 5px 20px;
+      cursor: pointer;
+    }
+  }
+}

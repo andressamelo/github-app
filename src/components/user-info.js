@@ -20,7 +20,7 @@ const UserInfo = ({ userinfo }) => (
         <li>Seguindo <span>{userinfo.following}</span> usuários</li>
       </ul>
     </div>
-  </div>
+  </div>    
 )
 
 UserInfo.propTypes = {

@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 
 const Search = ({ isDisabled, handleSearch }) => (
   <div className='app__search'>
-    <h1>Search for users on GitHub</h1>
-    <input 
-    type='search' 
-    placeholder='Enter the username'
-    disabled={isDisabled}
-    onKeyUp={handleSearch}
-    />
+    <div className='app__container'>
+      <h1>Search for users on GitHub</h1>
+      <input 
+      type='search' 
+      placeholder='Enter the username'
+      disabled={isDisabled}
+      onKeyUp={handleSearch}
+      />      
+    </div>
   </div>
 )
 

@@ -15,26 +15,28 @@ const AppContent = ({
   getStarred 
 }) => (
   <div className='app'>
-    <Search isDisabled={isFetching} handleSearch={handleSearch} />
-    {isFetching && <div>Carregando...</div>}
-    {!!userinfo && <UserInfo userinfo={userinfo}/>}
-    {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
+      <Search isDisabled={isFetching} handleSearch={handleSearch} />
+      {isFetching && <div>Carregando...</div>}
+      
+    <div className='app__container'>
+      {!!userinfo && <UserInfo userinfo={userinfo}/>}
+      {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
+      {!!repos.length &&
+        <Repos
+          className='app__repos'
+          title='Repositórios'
+          repos={repos}
+        />
+      }
 
-    {!!repos.length &&
-      <Repos
-        className='app__repos'
-        title='Repositórios'
-        repos={repos}
-      />
-    }
-
-    {!!starred.length &&
-      <Repos
-        className='app__starred'
-        title='Favoritos'
-        repos={starred}
-      />
-    }
+      {!!starred.length &&
+        <Repos
+          className='app__starred'
+          title='Favoritos'
+          repos={starred}
+        />
+      }      
+    </div>
   </div>
 )
 

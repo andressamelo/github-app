@@ -2,6 +2,9 @@ Small project that searches for users on github and lists their repositories and
 
 Made with React. In constantly development and improvements
 
+Project available at
+https://github-app.andressamelo.vercel.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
